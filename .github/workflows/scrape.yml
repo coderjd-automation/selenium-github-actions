@@ -10,7 +10,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10.6'
       - name: Installed package list
         run: apt list --installed
       - name: Remove Chrome
@@ -19,7 +19,7 @@ jobs:
       # - name: Install software
       #   run: sudo apt install -y chromium-browser
       - name: Install all necessary packages
-        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium dnspython pymongo pyTelegramBotAPI requests  
       - name: Run the scraping script
         run: python scraper.py
 
